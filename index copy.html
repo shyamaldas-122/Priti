@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p.css">
+    
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="music2.mp3" type="audio/mpeg">
+        <source src="music2.ogg" type="audio/ogg">
+      </audio>
+    <canvas id="canvas"></canvas>
+
+<div class="card">
+  <img src="Priti.png">
+  <br>
+  <p>"The only way to have a friend is to be one"</p>
+  <button onclick="playAudio()" type="button"  class="btn">Play</button>
+  <button onclick="pauseAudio()" type="button">Pause</button>
+  <!-- <button class="btn"><a href="https://shyamaldas-122.github.io/portfolio./">Check</a></button> -->
+  
+  <!-- <button>Click here</button> -->
+</div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    
+    function playAudio() { 
+      x.play(); 
+    }
+    
+    function pauseAudio() { 
+      x.pause(); 
+    }
+</script>
+<script src="p.js"></script>
+</body>
+</html>

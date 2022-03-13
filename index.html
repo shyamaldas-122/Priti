@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="8.5; url='index copy.html'" />
+    <title>Document</title>
+    <!-- <script src="jss.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <div class="wrapper">
+
+        <div class="text text-1"></div>
+        <div class="text text-2"></div>
+        <div class="text text-3"></div>
+        <div class="text text-4"></div>
+        <div class="text text-5"></div>
+
+    </div>
+    <i class="fa-solid fa-square-caret-right"></i>
+
+</body>
+
+</html>
+<script>
+    let lineOne, lineTwo, lineThree, lineFour, lineFive;
+lineOne = document.querySelector(".text-1");
+lineTwo = document.querySelector(".text-2");
+lineThree = document.querySelector(".text-3");
+lineFour = document.querySelector(".text-4");
+lineFive = document.querySelector(".text-5");
+
+let tl = anime.timeline({
+  delay: 0,
+  easing: "easeOutExpo",
+  direction: "alternate",
+  loop: true
+});
+
+tl.add(
+  {
+    duration: 700,
+    targets: lineOne,
+    translateX: -75,
+    opacity: 0
+  },
+  400
+);
+
+tl.add({
+  duration: 700,
+  targets: lineOne,
+  height: 175,
+  opacity: 1
+});
+tl.add(
+  {
+    duration: 100,
+    targets: lineTwo,
+    translateX: -75,
+    opacity: 0
+  },
+  "+=500"
+);
+tl.add({
+  duration: 700,
+  targets: lineTwo,
+  width: 150,
+  opacity: 1
+});
+tl.add({
+  duration: 700,
+  targets: lineThree,
+  height: 200,
+  opacity: 1
+});
+tl.add({
+  duration: 100,
+  targets: lineFour,
+  translateX: 75,
+  opacity: 0
+});
+tl.add({
+  duration: 700,
+  translateY: 45,
+  translateX: 75,
+  targets: lineFour,
+  height: 100,
+  opacity: 1
+});
+tl.add({
+  duration: 100,
+  targets: lineFive,
+  translateX: 75,
+  opacity: 0
+});
+tl.add({
+  duration: 700,
+  targets: lineFive,
+  translateX: 75,
+  translateY: -60,
+  opacity: 1
+});
+    
+</script>
